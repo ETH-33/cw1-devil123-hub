@@ -10,12 +10,25 @@
 </head>
 
 <body>
-    <!-- Header -->
     <header>
         <nav>
             <ul class="navbar">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#courses" onclick="scrollToCourses()">Courses</a></li>
+                <li><a href="#" onclick="toggleCourseMenu()">Courses</a>
+                    <ul id="course-menu" class="dropdown-menu">
+
+
+                        <li><a href="web.html">HTML</a></li>
+                        <li><a href="python.html">Python</a></li>
+                        <li><a href="c.html">CSS</a></li>
+                        <li>
+                            <a href="java.html"></a>
+                        </li>
+                        <!-- Add more course options as needed -->
+
+
+                    </ul>
+                </li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="#login">Login</a></li>
@@ -24,7 +37,6 @@
         </nav>
     </header>
 
-    <!-- Main Content -->
     <main>
         <section id="home">
             <div class="container">
@@ -47,45 +59,55 @@
                 <p>Join thousands of learners around the world and start your coding journey with d-learning today!</p>
             </div>
         </section>
-
-        <!-- Courses -->
-
-        <section id="course-options" style="display: none;">
-            <h2>Choose a Course</h2>
-            <ul>
-                <li><a href="#" onclick="showCourseDetails('html')">HTML</a></li>
-                <li><a href="#" onclick="showCourseDetails('python')">Python</a></li>
-                <li><a href="#" onclick="showCourseDetails('css')">CSS</a></li>
-                <!-- Add more course options as needed -->
-            </ul>
-            <div id="course-details" style="display: none;"></div>
-        </section>
-
-        <section id="courses">
-            <h2>Courses</h2>
-            <div class="course">
-                <h3>HTML</h3>
-                <p>Learn the fundamentals of HTML for building web pages.</p>
-            </div>
-
-            <div class="course">
-                <h3>Python</h3>
-                <p>Discover the power of Python programming language.</p>
-            </div>
-
-            <div class="course">
-                <h3>CSS</h3>
-                <p>Master the styling of web pages with CSS.</p>
-            </div>
-
-            <div class="course">
-                <h3>JavaScript</h3>
-                <p>Unlock the interactivity and dynamic features of web development with JavaScript.</p>
-            </div>
-        </section>
     </main>
 
-    <!-- Login Form -->
+    <!-- Course Section-->
+
+    <section id="course-details" style="display: none;">
+        <div class="container">
+            <h2 id="course-title"></h2>
+            <p id="course-description"></p>
+        </div>
+
+    </section>
+
+    <!-- About Section-->
+
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Welcome to d-learning, the premier online learning platform for coding enthusiasts. Our mission is to provide high-quality courses on web development, programming, and more, empowering learners to acquire valuable skills and advance their
+                careers.
+            </p>
+            <p>With d-learning, you can embark on a coding journey at your own pace. Our courses are designed to be comprehensive and beginner-friendly, catering to individuals with varying levels of coding experience.</p>
+            <p>Our team of experienced instructors brings industry expertise to deliver engaging and informative video lectures, along with hands-on coding exercises and projects. You'll gain practical skills and real-world knowledge to apply in your coding
+                endeavors.
+            </p>
+            <p>At d-learning, we believe in fostering an interactive learning community. Connect with fellow learners, ask questions, and receive support from both instructors and peers. Collaborate, share insights, and grow together as you progress through
+                your coding journey.</p>
+            <p>Join thousands of learners around the world who have unlocked their potential with d-learning. Start exploring our courses today and unlock endless possibilities in the world of coding.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>For any inquiries or assistance, please feel free to reach out to us. We're here to help!</p>
+            <ul>
+                <li>Email: <a href="mailto:bhadelsushant3@gmail.com">bhadelsushant3@gmail.com</a></li>
+                <li>Phone: <a href="tel:+919860662528">9860662528</a></li>
+                <li>Follow us on social media:</li>
+                <li><a href="https://www.facebook.com/profile.php?id=100086044917127">Facebook</a></li>
+                <li><a href="https://github.com/devil123-hub">Github</a></li>
+                <li><a href="https://www.instagram.com/bdlsushant/">Instagram</a></li>
+                <!-- Add more social media links as needed -->
+            </ul>
+        </div>
+    </section>
+
+
+
     <section id="login">
         <div class="container">
             <h2>Login</h2>
@@ -101,14 +123,15 @@
         </div>
     </section>
 
-    <!-- Signup Form -->
     <section id="signup">
         <div class="container">
             <h2>Sign Up</h2>
             <!-- Add your sign up form here -->
         </div>
     </section>
-    </main>
+
+
+    <script src="script.js"></script>
 </body>
 
 </html>

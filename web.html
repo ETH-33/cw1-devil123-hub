@@ -3,20 +3,113 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML</title>
+    <title>HTML Course</title>
     <link rel="stylesheet" href="styles.css">
+
 </head>
 
 <body>
-    <h1>HTML</h1>
-    <p>Hypertext Markup Language (HTML) is the standard markup language for documents designed to Website. HTML is the most basic building block of the Web. It defines the meaning and structure of web. HTML consists of a series of elements. HTML elements
-        tell the browser how to display the content. HTML elements are represented by tags.
-    </p>
+    <!-- The header section -->
+    <header>
+        <h1>HTML Course</h1>
+    </header>
+
+    <!-- The main content section -->
+    <main>
+        <h2>HTML</h2>
+
+        <section>
+            <h3>Introduction to HTML</h3>
+            <p>HTML (HyperText Markup Language) is the standard markup language for creating web pages. It provides the structure and organization of content on the World Wide Web. HTML is the standard markup language for documents designed to be displayed
+                in a web browser.
+            </p>
+        </section>
+
+        <section>
+            <h3>HTML Tags</h3>
+            <p>HTML tags are used to define the structure of the page. HTML tags are always opened with a &lt; tag and closed with a &gt; tag. Some tags (called void tags) do not require a closing tag. The &lt;br&gt; tag is an example of a void tag.
+                <br>
+
+                <br> HTML tags can be nested (contain other tags inside of them).
+                <br>
+                <br>
+                <b>Example:</b>
+
+                <pre><code>
+              HTML provides a set of basic elements that form the building blocks of a web page. These include headings, paragraphs, lists, tables, and forms. Understanding these basic elements is essential for creating well-structured web content.
+              
+              &lt;h1&gt;This is a heading&lt;/h1&gt;
+              &lt;p&gt;This is a paragraph.&lt;/p&gt;`
+              
+              &lt;ul&gt;
+                &lt;li&gt;Item 1&lt;/li&gt;
+                &lt;li&gt;Item 2&lt;/li&gt;
+                &lt;li&gt;Item 3&lt;/li&gt;
+              &lt;/ul&gt;
+              
+              &lt;table&gt;
+                &lt;tr&gt;
+                  &lt;th&gt;Name&lt;/th&gt;
+                  &lt;th&gt;Age&lt;/th&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                  &lt;td&gt;John&lt;/td&gt;
+                  &lt;td&gt;25&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                  &lt;td&gt;Jane&lt;/td&gt;
+                  &lt;td&gt;30&lt;/td&gt;
+                &lt;/tr&gt;
+              &lt;/table&gt;
+              
+              &lt;form action="submit-form.php" method="POST"&gt;
+                &lt;label for="name"&gt;Name:&lt;/label&gt;
+                &lt;input type="text" id="name" name="name" required&gt;
+                
+                &lt;label for="email"&gt;Email:&lt;/label&gt;
+                &lt;input type="email" id="email" name="email" required&gt;
+                
+                &lt;input type="submit" value="Submit"&gt;
+              &lt;/form&gt;
+            </code></pre>
+        </section>
 
 
+        <section>
+            <h3> HTML Basics</h3>
+            <p>HTML provides a set of basic elements that form the building blocks of a web page. These include headings, paragraphs, lists, tables, and forms. Understanding these basic elements is essential for creating well-structured web content.</p>
+        </section>
 
+        <section>
+            <h3>Section 4: HTML Forms</h3>
+            <p>HTML forms allow users to input and submit data on a web page. Form elements include text fields, checkboxes, radio buttons, dropdown menus, and buttons. They are essential for interactive web applications and data collection.</p>
+
+            <h4>Example Form</h4>
+            <pre>
+              <code>
+                &lt;form&gt;
+                  &lt;label for="name"&gt;Name:&lt;/label&gt;
+                  &lt;input type="text" id="name" name="name" placeholder="Enter your name" required&gt;
+                  
+                  &lt;label for="email"&gt;Email:&lt;/label&gt;
+                  &lt;input type="email" id="email" name="email" placeholder="Enter your email" required&gt;
+                  
+                  &lt;label for="message"&gt;Message:&lt;/label&gt;
+                  &lt;textarea id="message" name="message" placeholder="Enter your message" required&gt;&lt;/textarea&gt;
+                  
+                  &lt;input type="submit" value="Submit"&gt;
+                &lt;/form&gt;
+              </code>
+            </pre>
+        </section>
+
+    </main>
+
+    <!-- The footer section -->
+    <footer>
+        &copy; 2023 HTML Course. All rights reserved.
+    </footer>
 </body>
 
 </html>
