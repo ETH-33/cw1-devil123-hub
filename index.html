@@ -3,15 +3,119 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>D-Learning</title>
+    <title>d-learning - Online Learning Platform</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="script" href="script.js">
+    <script src="script.js"></script>
 </head>
 
 <body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#login">Login</a></li>
+                <li><a href="#signup">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <!-- Main Content -->
+    <main>
+        <section id="home">
+            <div class="container">
+                <h1>Welcome to d-learning</h1>
+                <p>Learn coding with D-Learning!</p>
+                <div class="images-container">
+                    <img src="assest/images/2.png" Coding Image 1 ">
+                    <img src="assest/images/1.jpg " alt="Coding Image 2 ">
+                </div>
+                <p>Start your coding journey today and unlock endless possibilities.</p>
+                <h2>Why Choose D-learning?</h2>
+                <ul class="features-list ">
+                    <li>Wide range of courses on web development, programming, and more.</li>
+                    <li>High-quality video lectures and course materials.</li>
+                    <li>Experienced instructors with industry expertise.</li>
+                    <li>Hands-on coding exercises and projects.</li>
+                    <li>Interactive learning community and support.</li>
+                    <li>Flexible learning at your own pace.</li>
+                </ul>
+                <p>Join thousands of learners around the world and start your coding journey with D-learning today!</p>
+            </div>
+        </section>
+
+        <!-- Courses -->
+        <section id="courses ">
+            <div class="container ">
+                <h2>Courses</h2>
+                <div class="courses ">
+                    <h3>HTML</h3>
+                    <p>Learn the fundamentals of HTML for building web pages.</p>
+                    <div class="video-container ">
+                        <iframe width="560 " height="315 " src="https://youtu.be/BsDoLVMnmZs " frameborder="0 " allowfullscreen></iframe>
+                    </div>
+                    <button onclick="toggleCourseDetails( 'html') ">Enroll Now</button>
+                    <div id="htmlCoursesDetails " style="display: none; ">
+                        <h4>HTML Course</h4>
+                        <h5>Lesson 1: Introduction to HTML</h5>
+                        <ul>
+                            <li>What is HTML?</li>
+                            <li>HTML syntax and structure</li>
+                            <li>Setting up your first HTML document</li>
+                            <li>Basic HTML tags: &lt;html&gt;, &lt;head&gt;, &lt;body&gt;</li>
+                        </ul>
+                        <h5>Lesson 2: Text Formatting</h5>
+                        <ul>
+                            <li>Heading tags: &lt;h1&gt; to &lt;h6&gt;</li>
+                            <li>Paragraphs: &lt;p&gt; tag</li>
+                            <li>Line breaks: &lt;br&gt; tag</li>
+                            <li>Bold and italic text: &lt;strong&gt; and &lt;em&gt; tags</li>
+                        </ul>
+                        <!-- More lesson details -->
+                    </div>
+                </div>
+
+                <div class="course ">
+                    <h3>Python</h3>
+                    <p>Discover the power of Python programming language.</p>
+                    <div class="video-container ">
+                        <iframe width="560 " height="315 " src="https://www.youtube.com/embed/ijklmnop " frameborder="0 " allowfullscreen></iframe>
+                    </div>
+                    <a href="# ">Enroll Now</a>
+                </div>
+
+                <!-- Add more course sections as needed -->
+            </div>
+        </section>
+
+        <!-- Login Form -->
+        <section id="login ">
+            <div class="container ">
+                <h2>Login</h2>
+                <form action="login.php " method="POST ">
+                    <label for="username ">Username</label>
+                    <input type="text " id="username " name="username " required>
+
+                    <label for="password ">Password</label>
+                    <input type="password " id="password " name="password " required>
+
+                    <input type="submit " value="Login ">
+                </form>
+            </div>
+        </section>
+
+        <!-- Signup Form -->
+        <section id="signup ">
+            <div class="container ">
+                <h2>Sign Up</h2>
+                
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>
