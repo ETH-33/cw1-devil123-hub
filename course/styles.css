@@ -84,13 +84,21 @@
       text-decoration: underline;
   }
   
-  .code1 {
-      border: 1px solid black;
-  }
-  
   footer {
       background-color: #333;
       color: #fff;
       padding: 20px;
       text-align: center;
+  }
+  
+  .container {
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+  }
+  
+  .code1 {
+      border: 1px solid black;
+      width: fit-content;
+      display: flex;
   }
