@@ -141,32 +141,12 @@ h1 {
     font-size: 20px;
 }
 
+.bookmark {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
 
 /* Contact Section */
-
-#contact {
-    padding: 20px;
-    text-align: center;
-    background-color: #333;
-    color: #fff;
-}
-
-#contact ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-}
-
-#contact ul li {
-    margin-bottom: 10px;
-}
-
-#contact ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-#contact ul li a:hover {
-    color: #f9c453;
-}

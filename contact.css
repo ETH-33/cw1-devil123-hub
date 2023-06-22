@@ -1,0 +1,86 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    width: 800px;
+    background-color: #f2f2f2;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.left {
+    flex: 1;
+    padding: 20px;
+}
+
+.left img {
+    max-width: 100%;
+    height: auto;
+}
+
+.right {
+    flex: 1;
+    padding: 20px;
+}
+
+.contact h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact .form-container {
+    margin-bottom: 20px;
+}
+
+.contact .form {
+    display: grid;
+    gap: 10px;
+}
+
+.contact .form input,
+.contact .form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact .form input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.contact .form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.contact .address h4 {
+    margin-bottom: 5px;
+}
+
+.contact .address p {
+    margin-top: 0;
+}
+
+.contact .social a {
+    color: #007bff;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.contact .social a:hover {
+    color: #0056b3;
+}
+
+.message {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
