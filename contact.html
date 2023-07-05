@@ -10,43 +10,44 @@
 
 <body>
     <div class="container">
-        <div class="card">
-            <div class="left">
-                <h2 class="message">Feel free to message us</h2>
-                <img src="https://images.unsplash.com/photo-1659706994835-fb804722b0f2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80">
-            </div>
-            <div class="right">
-                <h2 class="contact">Contact Us</h2>
-                <div class="contact">
-                    <div class="form-container">
-                        <form class="form">
-                            <div class="username">
-                                <input type="text" placeholder="Enter your Name">
-                            </div>
-                            <div class="useremail">
-                                <input type="email" placeholder="Enter your email" required>
-                            </div>
-                            <div class="usermessage">
-                                <textarea placeholder="Enter your message" required></textarea>
-                            </div>
-                            <div class="usersubmit">
-                                <input type="submit" value="Contact Us">
-                            </div>
-                        </form>
-                    </div>
-                    <div class="address">
-                        <div class="email">
-                            <h4>Gmail</h4>
-                            <p>bhadelsushant3@gmail.com</p>
+        <form action="contact.php" method="post">
+            <div class="card">
+                <div class="left">
+                    <h2 class="message">Feel free to message us</h2>
+                    <img src="https://images.unsplash.com/photo-1659706994835-fb804722b0f2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80">
+                </div>
+                <div class="right">
+                    <h2 class="contact">Contact Us</h2>
+                    <div class="contact">
+                        <div class="form-container">
+                            <form class="form">
+                                <div class="username">
+                                    <input type="text" name="name" placeholder="Enter your Name">
+                                </div>
+                                <div class="useremail">
+                                    <input type="email" name="email" placeholder="Enter your email" required>
+                                </div>
+                                <div class="usermessage">
+                                    <textarea name="message" placeholder="Enter your message" required></textarea>
+                                </div>
+                                <div class="usersubmit">
+                                    <input type="submit" value="Contact Us">
+                                </div>
+                            </form>
                         </div>
-                        <div class="location">
-                            <h4>Based in</h4>
-                            <p>Bhaktapur</p>
+                        <div class="address">
+                            <div class="email">
+                                <h4>Gmail</h4>
+                                <p>bhadelsushant3@gmail.com</p>
+                            </div>
+                            <div class="location">
+                                <h4>Based in</h4>
+                                <p>Bhaktapur</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
     </div>
 
 </body>

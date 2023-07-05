@@ -1,0 +1,84 @@
+* *::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    font-family: "Poppins";
+    background: hsl(187, 0%, 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+header {
+    width: 245px;
+    height: 50px;
+    padding-left: 3em;
+    padding-top: 9px;
+    margin-bottom: 10px;
+    margin-left: 6px;
+}
+
+.header>h1 {
+    justify-self: center;
+    color: rgb(0, 0, 0);
+}
+
+.container {
+    justify-item: center;
+    padding: 10px;
+    margin: 3.125rem auto 0 auto;
+}
+
+form {
+    background: hsl(258, 100%, 24%);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19);
+    border-radius: 0.54em;
+    margin-top: 10px;
+    width: 245px;
+}
+
+.forms {
+    padding: 20px;
+    margin: 1px;
+}
+
+.form-group {
+    text-align: center;
+    color: rgb(255, 0, 0);
+}
+
+input {
+    text-align: center;
+    border-radius: 20px;
+    border: none;
+    background: ;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    color: rgb(0, 0, 0);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19);
+    width: 100%;
+}
+
+button {
+    border: none;
+    border-radius: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-left: 50px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    width: 50%;
+    height: 50%;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    background: linear-gradient(90deg, pink, purple);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19);
+}
+
+p {
+    text-align: center;
+    padding-top: 20px;
+}

@@ -1,3 +1,21 @@
+<?php
+
+session_start();
+
+if (isset($_SESSION["user_id"])) {
+
+    $mysqli = require __DIR__ . "/database.php";
+
+    $sql = "SELECT * FROM user
+            WHERE id = {$_SESSION["user_id"]}";
+
+    $result = $mysqli->query($sql);
+
+    $user = $result->fetch_assoc();
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,8 +51,15 @@
                 </li>
                 <li><a href="#about">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="#login">Login</a></li>
-                <li><a href="#signup">Sign Up</a></li>
+                <?php if (isset($user)): ?>
+
+        <li>Hello <?=htmlspecialchars($user["name"])?></li>
+        <li><a href="logout.php">Log out</a></li>
+    <?php else: ?>
+        <li><a href="login.php">Login</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
+    <?php endif;?>
+
             </ul>
         </nav>
     </header>
