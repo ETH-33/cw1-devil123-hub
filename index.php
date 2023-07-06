@@ -64,7 +64,24 @@ if (isset($_SESSION["user_id"])) {
         </nav>
     </header>
 
-<?php include ("content.php"); ?>
+    <main>
+        <section id="home">
+            <div class="container">
+                <form action="">
+
+
+
+                    <h1>Welcome to D-Learning
+                    </h1>
+                    <p class="code">Learn coding with us
+
+
+                    </p>
+           <?php
+           include("context.php")
+           ?>
+        </section>
+    </main>
 
     <!-- Course Section-->
 

@@ -1,45 +1,83 @@
-<main>
-        <section id="home">
-            <div class="container">
-                <form action="">
+<?php
+include("database.php");
+if(isset($_POST['submit']))
+{
+    if($_POST['title']=='' or $_POST['content']=='')
+    {
+        echo("<script>alert('FILL ALL THE FIELDS.')</script>");
+        exit();
+    }
+    else
+    {
+        $title = $_POST['title'];
+        $content = $_POST['content'];
+        $image_name = $_FILES['image']['name'];
+        $image_type = $_FILES['image']['type'];
+        $image_size = $_FILES['image']['size'];
+
+        $image_tmp = $_FILES['image']['tmp_name'];
+
+        if($image_type=="image/jpeg" or $image_type=="image/jpg" or $image_type=="image/png")
+        {
+            if ($image_size <= 2000000)
+            {
+                $destination = "assest/images/" . $image_name;
+                move_uploaded_file($image_tmp, $destination);
+
+            }
+           
+        }
+        else
+        {
+            echo("<script>alert('Invalid File Type.')</script>");
+        }
+        $query = "insert into content(title,content,image) value('$title','$content','$image_name')";
 
 
+        if ($mysqli->query($query))
+        {
+            echo "<center><h1>POST HAS BEEN SUBMITTED.</h1></center>";
+        }
+    }
+}
+?>
 
-                    <h1>Welcome to D-Learning
-                    </h1>
-                    <p class="code">Learn coding with us
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTENT</title>
+</head>
 
-                    </p>
-                    <div class="images-container">
-                        <img src="assest/images/2.png" alt="Coding Image 1">
-                        <p class="journey">Start your coding journey today and unlock endless possibilities. By joining this course, students will gain the skills and knowledge to create stunning and interactive websites from scratch. They will unleash their creativity,
-                            learn to write clean and efficient code, and develop the ability to bring their ideas to life in the digital realm. The benefits of learning web development extend far beyond the classroom. In today's digital age, proficiency
-                            in web programming opens up a world of exciting opportunities. From pursuing a career as a professional web developer to creating personal portfolios and launching entrepreneurial ventures, the possibilities are endless. Web
-                            development skills are in high demand, making it a valuable asset for future prospects. What sets this course apart is its unique and effective structure. I have carefully designed a step-by-step learning journey that fosters
-                            both understanding and practical application. Through engaging projects, hands-on exercises, and real-world examples, students will build a solid foundation in web development. Each lesson is crafted to be interactive, encouraging
-                            active participation and problem-solving. By taking a project-based approach, students will gain valuable experience working on real-life web development scenarios, empowering them to tackle challenges with confidence. Furthermore,
-                            my teaching method focuses on individual growth and development. I believe in fostering a supportive and nurturing environment where students can thrive. I provide personalized attention, ensuring that each student's unique
-                            needs and learning styles are addressed. By combining theoretical knowledge with practical exercises and continuous feedback, I guide students towards mastery of web development concepts.
+<body>
+    <form action="content.php" name="book" enctype="multipart/form-data" method="POST">
+        <table align="center" border="10" width="740">
+            <tr>
+                <td colspan="5" align="center" bgcolor="#FF0000"><h1>WRITE YOUR CONTENT HERE</h1></td>
+            </tr>
+            <tr>
+                <td align="right">Title</td>
+                <td align="center"><input type="text" name="title"></td>
+            </tr>
 
+            <tr>
+                <td align="right">Content</td>
+                <td align="center"><textarea name="content"></textarea></td>
+            </tr>
 
+            <tr>
+                <td align="right">Image</td>
+                <td align="center"><input type="file" name="image"></td>
+            </tr>
+            <tr>
+                <td colspan="5" align="center"><input type="submit" name="submit" value="Insert Content"></td>
+            </tr>
 
-                        </p>
+        </table>
+    </form>
 
+</body>
 
-                        <img src="assest/images/1.jpg" alt="Coding Image 2">
-                    </div>
-
-                    <h2 class="features">Why Choose d-learning?</h2>
-                    <ul class="features-list">
-                        <li>Wide range of courses on web development, programming, and more.</li>
-                        <li>High-quality video lectures and course materials.</li>
-                        <li>Experienced instructors with industry expertise.</li>
-                        <li>Hands-on coding exercises and projects.</li>
-                        <li>Interactive learning community and support.</li>
-                        <li>Flexible learning at your own pace.</li>
-                    </ul>
-                    <p>Join thousands of learners around the world and start your coding journey with D-Learning today!</p>
-            </div>
-        </section>
-    </main>
+</html>
