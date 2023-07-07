@@ -1,4 +1,24 @@
-<!DOCTYPE html>
+
+<?php
+$connection = mysqli_connect("localhost", "root", "", "dlearing");
+
+if (!$connection) {
+    echo "Failed to connect to MySQL: " . mysqli_connect_error();
+    exit();
+}
+
+$query = mysqli_query($connection, 'select * from content where title = "HTML"');
+
+$row = mysqli_fetch_array($query);
+
+    $title = $row['title'];
+    $content = $row['content'];
+    $image = $row['image'];
+
+    echo $title;
+
+mysqli_close($connection);
+?>
 <html lang="en">
 
 <head>
@@ -15,16 +35,15 @@
         <h1>HTML Course</h1>
     </header>
 
+      
     <!-- The main content section -->
     <main>
-        <h2>HTML</h2>
+        <h2><?php $title ?></h2>
         <br>
         <br>
         <section>
             <h3>Introduction to HTML</h3>
-            <p>HTML stands for HyperText Markup Language. It is used to design web pages using a markup language. HTML is a combination of Hypertext and Markup language. Hypertext defines the link between web pages. A markup language is used to define the
-                text document within the tag which defines the structure of web pages. This language is used to annotate (make notes for the computer) text so that a machine can understand it and manipulate text accordingly. Most markup languages (e.g.
-                HTML) are human-readable. The language uses tags to define what manipulation has to be done on the text.
+            <p><?php $content ?>
 
             </p>
 
