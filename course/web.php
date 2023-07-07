@@ -1,4 +1,3 @@
-
 <?php
 $connection = mysqli_connect("localhost", "root", "", "dlearing");
 
@@ -7,18 +6,28 @@ if (!$connection) {
     exit();
 }
 
-$query = mysqli_query($connection, 'select * from content where title = "HTML"');
+$title = "HTML"; // The title to search for
 
-$row = mysqli_fetch_array($query);
+$query = mysqli_prepare($connection, 'SELECT * FROM content WHERE title = ?');
+mysqli_stmt_bind_param($query, "s", $title);
+mysqli_stmt_execute($query);
 
+$result = mysqli_stmt_get_result($query);
+
+if (mysqli_num_rows($result) > 0) {
+    $row = mysqli_fetch_array($result);
     $title = $row['title'];
     $content = $row['content'];
     $image = $row['image'];
 
     echo $title;
+    echo $content;
+    echo $image;
+} 
 
 mysqli_close($connection);
 ?>
+
 <html lang="en">
 
 <head>
@@ -32,18 +41,25 @@ mysqli_close($connection);
 <body>
     <!-- The header section -->
     <header>
+        <?
+        include("context.php")
+        ?>
         <h1>HTML Course</h1>
     </header>
 
       
     <!-- The main content section -->
     <main>
-        <h2><?php $title ?></h2>
+        <h2>HTML</h2>
         <br>
         <br>
         <section>
             <h3>Introduction to HTML</h3>
-            <p><?php $content ?>
+            <p>Here you will learn the basics of C programming and get an introduction to the C language. In this C Tutorial, you’ll learn all the C programming basics to advanced concepts like Variables, Arrays, Pointers, Strings, Loops, etc. This C Programming
+                Tutorial is designed for both beginners as well as experienced professionals, who’re looking to learn and enhance their knowledge of the C Programming language. C programming language is a general-purpose, procedural, high-level programming
+                language used to develop computer software, computer applications, system programming, game development, web development, and more. C language was developed by Dennis M. Ritchie at the Bell Telephone Laboratories in 1972. C is a powerful
+                and flexible language. It is a widely used programming language. C was developed for the programming of the UNIX operating System. C programming is known for its simplicity and efficiency. It is a better choice to start with programming,
+                It gives you a foundational understanding of programming.
 
             </p>
 

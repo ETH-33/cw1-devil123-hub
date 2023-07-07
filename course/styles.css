@@ -53,3 +53,41 @@
       width: fit-content;
       display: flex;
   }
+  
+  .container {
+      text-align: center;
+  }
+  
+  h2 {
+      font-size: 24px;
+      color: #333;
+  }
+  
+  .contact-info {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .contact-item {
+      margin: 10px;
+      text-align: center;
+  }
+  
+  .contact-item i {
+      font-size: 20px;
+      margin-bottom: 5px;
+  }
+  
+  .contact-item p {
+      font-size: 14px;
+  }
+  
+  .contact-item a {
+      text-decoration: none;
+      color: #333;
+  }
+  
+  .contact-item a:hover {
+      text-decoration: underline;
+  }

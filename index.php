@@ -38,7 +38,7 @@ if (isset($_SESSION["user_id"])) {
                     <ul id="course-menu" class="dropdown-menu">
 
 
-                        <li><a href="./course/web.html">HTML</a></li>
+                        <li><a href="./course/web.php">HTML</a></li>
                         <li><a href="python.html">Python</a></li>
                         <li><a href="c.html">C</a></li>
                         <li><a href="java.html">JAVA</a></li>
