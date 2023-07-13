@@ -39,6 +39,7 @@ if (isset($_SESSION["user_id"])) {
             <nav>
                 <ul>
                     <li><a href="#">Home</a></li>
+                    <li><a href="content.php">Course Update</a></li>
                     <li><a href="logout.php">Logout</a></li>
                 </ul>
             </nav>
