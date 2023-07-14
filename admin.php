@@ -77,7 +77,9 @@ if (isset($_SESSION["user_id"])) {
     </main>
 
     <footer>
-        <!-- Add your footer content here -->
+    <div class="container">
+            <p>&copy; 2023 Admin Panel. All rights reserved.</p>
+        </div>
     </footer>
 <?php else: ?>
     <?php header("Location: index.php"); ?>

@@ -7,10 +7,10 @@ if (isset($_SESSION["user_id"])) {
     
     $username = $_POST['username'];
     $email = $_POST['email'];
-    $password = $_POST['password'];
+    $password = $_POST['password_hash'];
 
    
-    $insertQuery = "INSERT INTO user (name, email, password) VALUES ('$username', '$email', '$password')";
+    $insertQuery = "INSERT INTO user (name, email, password_hash) VALUES ('$username', '$email', '$password_hash')";
     $result = $mysqli->query($insertQuery);
 
     if ($result) {
