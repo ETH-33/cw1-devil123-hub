@@ -66,7 +66,8 @@ mysqli_close($connection);
             <img src="in.jpg" alt="Introduction">
 
             <p>HTML is a markup language used by the browser to manipulate text, images, and other content, in order to display it in the required format. HTML was created by Tim Berners-Lee in 1991. The first-ever version of HTML was HTML 1.0, but the first
-                standard version was HTML 2.0, published in 1995.
+                standard version was HTML 2.0, published in 1995. 
+            
 
 
             </p>
@@ -96,12 +97,27 @@ mysqli_close($connection);
                 <br>
 
                 <br> HTML tags can be nested (contain other tags inside of them).
+                This means you could have an ordered list within another unordered list or vice versa.<br/>
+
                 <br>
                 <br>
 
                 <h2>Heading Tags</h2>
                 <p>Any document starts with a heading. You can use different sizes for your headings. HTML also has six levels of headings, which use the elements <b>&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;,</b> and <b>&lt;h6&gt;</b>. While
-                    displaying any heading, browser adds one line before and one line after that heading.</p>
+                    displaying any heading, browser adds one line before and one line after that heading.
+                    <hr />
+                    Example:<br/><br/>
+                    <!-- Heading -->
+                    <h1>Welcome to my website!</h1>
+                    <h2>About me:</h2>
+                    I am learning web development with the help from Codecademy!<br /><br />
+                    Another example for h4 tag:<br /><br />
+                    <!-- Hierarchy level four-->
+                    <h4>My favorite foods are:</h4>
+                    Pizza, Sushi, Salad
+                    <br>
+                    <br>
+                </p>
 
                 <img src="h1.png" alt="heading">
                 <br>
@@ -112,6 +128,11 @@ mysqli_close($connection);
                 <br>
                 <b>Example: <br>
                     HTML provides a set of basic elements that form the building blocks of a web page. These include headings, paragraphs, lists, tables, and forms. Understanding these basic elements is essential for creating well-structured web content.
+                    HTML code of an unordered list.<br></b>
+                    Here's how you can create an ordered or unordered (bullet) list in HTML using either ol
+                    and ul tags respectively.
+
+
               
                 </b>
                 <div class="container">
@@ -141,6 +162,7 @@ mysqli_close($connection);
                   &lt;td&gt;30&lt;/td&gt;
                 &lt;/tr&gt;
               &lt;/table&gt;
+
               
               
             </code></pre>
@@ -155,7 +177,63 @@ mysqli_close($connection);
 
         <section>
             <h3> HTML Basics</h3>
-            <p>HTML provides a set of basic elements that form the building blocks of a web page. These include headings, paragraphs, lists, tables, and forms. Understanding these basic elements is essential for creating well-structured web content.</p>
+            <p>HTML provides a set of basic elements that form the building blocks of a web page. These include headings, paragraphs, lists, tables, and forms. Understanding these basic elements is essential for creating well-structured web content.
+                <ul style="font-size: 26px;">
+                <li><strong>&lthtml&gt;</strong>: This tag is used to define
+                the root of an html document.</li>
+                <br/>
+                <li><strong>&ltshead&gt;&lt/thead&gt;</strong>: These
+                tags are used in conjunction with a table element and contain
+                information about its columns such as column headings, etc.. The s stands
+                for "start".<br/><em>(Note that these two elements can be combined into one
+                    using "&lt;thead&gt;" alone.)</em>.</li>
+                    <br />
+                    <li><strong>&lttbody&gt;&lt/tbody&gt;</strong>: Contains
+                    rows or data within a table.<br /><em>(This also has another option called
+                        "&lt;tfoot&gt;", which contains summary row(s) at the bottom of the
+                        table)</em></li>
+                        <br />
+                        <li><strong>&lttr&gt;&lt/tr&gt;</strong>: Defines
+                        each individual row (or record). It should always come after either
+                        thead or tbody but before any td or th child nodes inside it.</li>
+                        <br />
+                        <li><strong>&lttd&gt;&lt/td&gt;</strong>: Used
+                        specifically within tr tags. Represents cell content within a single
+                        row.</li>
+                        <br />
+                        <li><strong>&ltimg src="" alt="" /&gt;</strong>: Inserts
+                        images on web pages by specifying their source URL ("src") attribute alongside other attributes like width
+                        images on web pages by specifying their source file path ("src") and textual description ("alt
+                        images on web pages by specifying their source file path ("src") alongside other attributes like alternative
+                        images to web pages by specifying their source URL ("src") attribute alongside optional alternate text ("
+                        an image to display on web pages.</li>
+                        <br/>
+                        <li><strong>&lthtml lang=&quot;en-US&quot;&gt
+                            &ltmeta charset="UTF-8"/&gt
+                            &lttitle&gt;Page Title&lt;/title&gt;
+                            &ltstyle&gt;
+                            &lt;/style&gt;
+                            &ltbody&gt;
+                            &lt;/body&gt;
+                            &lt;/html&gt;
+                            </strong>:<ul style='list-style:none;'>
+                            <li><em>&ltsmoothly transitions between different
+                                states of the page.&lt;/smooothly></em></li>
+                                <li><em>&lteach element has its own purpose and function, making code easier
+                                    to read and understand.&lt;/each></em></li>
+                                    <li><em>&tthe meta tag specifies character encoding used in document,&lt;/meta
+                                        <li><em>&tthe meta tag specifies character encoding used in document,&lt;/meta
+                                            <li><em>&tthe meta tag specifies character encoding used in document's text,&lt
+                                                <li><em>&tthe meta tag specifies character encoding used in document. This is important
+                                                    <li><em>&tthe meta tag specifies character encoding used in document. This is important
+                                                        <li><em>&tthe structure is easy to navigate through using a keyboard or screen reader
+                                                            <li><em>&tthe use of semantic tags makes it easy to navigate through a website
+                                                                <li><em>&tthe use of semantic tags makes it easy for search engines to index
+                                                                    <li><em>&tthe structure is easy to navigate through using a browser's built in
+                                                                        <li><em>&tthe use of semantic tags makes it easy for search engines to index
+                                                                            <li><em>&tthe use of semantic tags makes it easy for search engines to index
+
+            </p>
 
 
 
@@ -163,7 +241,29 @@ mysqli_close($connection);
 
         <section>
             <h3> HTML Forms</h3>
-            <p>HTML forms allow users to input and submit data on a web page. Form elements include text fields, checkboxes, radio buttons, dropdown menus, and buttons. They are essential for interactive web applications and data collection.</p>
+            <p>HTML forms allow users to input and submit data on a web page. Form elements include text fields, checkboxes, radio buttons, dropdown menus, and buttons. They are essential for interactive web applications and data collection.
+                <hr />
+                <ul style="list-style: none;">
+                <li><a href="#html5FormValidation"><strong>HTML 5 form validation:</
+                strong></a>&nbsp;&nbsp;<span>- How it works, how you can use
+                    it.</span></li>
+                    <li><a href="#exampleForm"><strong>An example of a basic
+                        contact us form with HTML and CSS styling:</strong></a>&nbsp;&nbsp;<span
+                        >- A simple way to create an attractive user interface
+                        using only standard web technologies like HTML/CSS. This is just one possible solution that may not
+                        using only standard web technologies like HTML/CSS.
+                        This is just one possible implementation that could be used as the basis
+                        or inspiration when designing forms in real projects.<br /></span></li>
+                        <li><a href="#"><strong>More coming soon...</strong></a></li>
+                        </ul>
+                        <!-- html5FormValidation -->
+                        <article id="html5FormValidation"></article>
+                        <header>
+                            <h2>How To Use HTML 5 Form Validation?</h2>
+
+
+
+            </p>
 
             <h4>Example Form</h4>
             <div class="container">
@@ -182,6 +282,7 @@ mysqli_close($connection);
                   
                   &lt;input type="submit" value="Submit"&gt;
                 &lt;/form&gt;
+
               </code> 
               </<div>
                 
@@ -226,6 +327,7 @@ mysqli_close($connection);
     <!-- The footer section -->
     <footer>
         &copy; 2023 HTML Course. All rights reserved.
+        
     </footer>
 </body>
 
