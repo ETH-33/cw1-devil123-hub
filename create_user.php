@@ -12,6 +12,7 @@ if (isset($_SESSION["user_id"])) {
    
     $insertQuery = "INSERT INTO user (name, email, password_hash) VALUES ('$username', '$email', '$password_hash')";
     $result = $mysqli->query($insertQuery);
+    
 
     if ($result) {
         
@@ -21,9 +22,12 @@ if (isset($_SESSION["user_id"])) {
     
         echo "Error creating user.";
     }
+
+
 } else {
     
     header("Location: index.php");
     exit();
 }
 ?>
+

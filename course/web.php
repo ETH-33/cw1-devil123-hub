@@ -6,7 +6,7 @@ if (!$connection) {
     exit();
 }
 
-$title = "HTML"; // The title to search for
+$title = "HTML";
 
 $query = mysqli_prepare($connection, 'SELECT * FROM content WHERE title = ?');
 mysqli_stmt_bind_param($query, "s", $title);

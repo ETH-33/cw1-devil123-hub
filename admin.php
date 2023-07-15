@@ -27,8 +27,8 @@ if (isset($_SESSION["user_id"])) {
             <h1>Admin Dashboard</h1>
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">User</a></li>
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#User">User</a></li>
                     <li><a href="content.php">Course update</a></li>
                     <li><a href="logout.php">Logout</a></li>
                 </ul>
